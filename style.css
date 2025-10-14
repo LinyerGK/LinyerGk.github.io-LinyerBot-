@@ -1,0 +1,298 @@
+/* Variables de Color (Muy útiles para un diseño consistente) */
+:root {
+    --color-fondo: #101015; /* Gris oscuro casi negro */
+    --color-neón-principal: #00ffff; /* Cian neón */
+    --color-alerta: #ff3333; /* Rojo para moderación/advertencias */
+    --color-texto: #e0e0e0;
+    --fuente-gamer: 'Orbitron', sans-serif; 
+}
+
+/* ------------------------------------------------ */
+/* 1. ESTILOS BASE Y CUERPO */
+/* ------------------------------------------------ */
+* {
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+}
+
+html {
+    scroll-behavior: smooth; /* Desplazamiento suave al hacer clic en enlaces de anclaje */
+}
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: var(--fuente-gamer);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+section {
+    padding: 80px 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--color-neón-principal);
+    text-shadow: 0 0 5px var(--color-neón-principal);
+}
+
+/* ------------------------------------------------ */
+/* 2. ENCABEZADO Y NAVEGACIÓN */
+/* ------------------------------------------------ */
+header {
+    background-color: rgba(16, 16, 21, 0.9); /* Un poco transparente */
+    padding: 15px 50px;
+    border-bottom: 2px solid var(--color-neón-principal);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5); /* Sombra neón */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--color-neón-principal);
+    text-shadow: 0 0 5px var(--color-neón-principal);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li a {
+    color: var(--color-texto);
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--color-neón-principal);
+    text-shadow: 0 0 10px var(--color-neón-principal);
+}
+
+
+/* ------------------------------------------------ */
+/* 3. SECCIÓN HERO (PRINCIPAL) */
+/* ------------------------------------------------ */
+.hero {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+/* Animación de Brillo Neón para Títulos */
+@keyframes neon-glow {
+    0% { text-shadow: 0 0 5px var(--color-neón-principal), 0 0 10px var(--color-neón-principal); opacity: 0.9; }
+    50% { text-shadow: 0 0 15px var(--color-neón-principal), 0 0 30px var(--color-neón-principal), 0 0 45px rgba(0, 255, 255, 0.5); opacity: 1; }
+    100% { text-shadow: 0 0 5px var(--color-neón-principal), 0 0 10px var(--color-neón-principal); opacity: 0.9; }
+}
+
+.hero h1 {
+    font-size: 3.5em; 
+    color: var(--color-neón-principal);
+    animation: neon-glow 1.5s infinite alternate; 
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.3em;
+    margin-bottom: 40px;
+}
+
+/* ------------------------------------------------ */
+/* 4. BOTONES Y TARJETAS */
+/* ------------------------------------------------ */
+.btn-invitar, .btn-discord, .btn-contact-dev {
+    display: inline-block;
+    padding: 15px 30px;
+    background: var(--color-neón-principal);
+    color: var(--color-fondo);
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    /* Estilo biselado/futurista */
+    box-shadow: 0 0 10px var(--color-neón-principal);
+    margin: 10px;
+}
+
+.btn-invitar:hover, .btn-discord:hover, .btn-contact-dev:hover {
+    background: #00dddd;
+    box-shadow: 0 0 20px var(--color-neón-principal), 0 0 40px rgba(0, 255, 255, 0.3);
+    transform: scale(1.05); /* Zoom sutil */
+}
+
+/* Las 'card' no se usan en el HTML actual, pero las mantendremos por si las necesitas */
+.card {
+    background-color: #1a1a24;
+    border: 1px solid var(--color-neón-principal);
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 25px rgba(0, 255, 255, 0.7);
+}
+
+
+/* ------------------------------------------------ */
+/* 5. ESTILOS DE PESTAÑAS INTERACTIVAS (FEATURES) */
+/* ------------------------------------------------ */
+.tabs-container {
+    max-width: 900px;
+    margin: 40px auto;
+    background-color: #1a1a24;
+    border: 1px solid var(--color-neón-principal);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.tab-buttons {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid var(--color-neón-principal);
+    margin-bottom: 20px;
+}
+
+.tab-link {
+    background: none;
+    border: none;
+    color: var(--color-texto);
+    padding: 15px 20px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: all 0.3s;
+    border-bottom: 3px solid transparent; 
+    font-family: var(--fuente-gamer);
+}
+
+.tab-link:hover {
+    color: var(--color-neón-principal);
+    background-color: rgba(0, 255, 255, 0.05);
+}
+
+.tab-link.active {
+    color: var(--color-neón-principal);
+    border-bottom: 3px solid var(--color-neón-principal);
+    text-shadow: 0 0 8px var(--color-neón-principal);
+}
+
+.tab-content {
+    display: none;
+    padding: 20px 0;
+    animation: fadeIn 0.5s; 
+}
+
+.tab-content h3 {
+    color: var(--color-alerta); /* Usar el color de alerta para un toque de moderación */
+    font-size: 1.8em;
+}
+
+.tab-content ul {
+    list-style: '⚡ '; /* Icono de rayo para la lista */
+    padding-left: 25px;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* ------------------------------------------------ */
+/* 6. PIE DE PÁGINA (FOOTER) */
+/* ------------------------------------------------ */
+footer {
+    background-color: #0d0d10;
+    color: #888;
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid rgba(0, 255, 255, 0.1);
+}
+
+footer a {
+    color: var(--color-neón-principal);
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+
+/* ------------------------------------------------ */
+/* 7. RESPONSIVIDAD (MENÚ MÓVIL) */
+/* ------------------------------------------------ */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 15px 20px;
+    }
+
+    nav {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+    
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    /* Pestañas en móvil: Apilar los botones */
+    .tab-buttons {
+        flex-direction: column;
+    }
+
+    .tab-link {
+        border-bottom: none;
+        border-radius: 5px;
+        margin-bottom: 5px;
+        border-left: 3px solid transparent;
+        transition: border-left 0.3s;
+    }
+
+    .tab-link.active {
+        border-bottom: none;
+        border-left: 3px solid var(--color-neón-principal);
+    }
+}

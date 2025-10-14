@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⚡ | LinyerBot - Moderación Gamer</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="logo">LinyerBot 🛡️</div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#caracteristicas">Características</a></li>
+                <li><a href="#soporte">Soporte/Discord</a></li>
+                <li><a href="#desarrollador">Desarrollador</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero" data-aos="zoom-in" data-aos-duration="1200">
+        <h1>Tu Servidor Merece la Mejor Moderación.</h1>
+        <p>El Bot de Moderación definitivo con estilo Gamer. ¡Protección y Velocidad!</p>
+        <a href="https://discord.com/oauth2/authorize?client_id=1420817272737366178&permissions=8&integration_type=0&scope=bot+applications.commands" target="_blank" class="btn-invitar">🚀 Invitar al Bot Ahora</a>
+    </section>
+
+    <section id="caracteristicas" class="features">
+        <h2 data-aos="fade-right">🛠️ Poderosas Herramientas de Moderación</h2>
+        <div class="tabs-container" data-aos="fade-up" data-aos-delay="200">
+            <div class="tab-buttons">
+                <button class="tab-link active" onclick="openFeature(event, 'AutoMod')">⚙️ Auto-Moderación</button>
+                <button class="tab-link" onclick="openFeature(event, 'Comandos')">💬 Comandos Rápidos</button>
+                <button class="tab-link" onclick="openFeature(event, 'Loggin')">💾 Loggin Avanzado</button>
+            </div>
+
+            <div id="AutoMod" class="tab-content active">
+                <h3>¡Control Total!</h3>
+                <p>El bot silencia spam, enlaces de phishing y lenguaje inapropiado al instante. ¡Configura tus propias reglas!</p>
+                <ul>
+                    <li>Anti-Raid por menciones.</li>
+                    <li>Filtro de palabras personalizable.</li>
+                </ul>
+            </div>
+
+            <div id="Comandos" class="tab-content">
+                <h3>Sintaxis Sencilla y Rápida</h3>
+                <p>Comandos intuitivos como `/kick [usuario]`, `/ban [usuario] [razón]` y un sistema de advertencias (`/warn`).</p>
+            </div>
+
+            <div id="Loggin" class="tab-content">
+                <h3>Nunca Pierdas un Detalle</h3>
+                <p>Registro detallado de todas las acciones de moderación: quién actuó, cuándo, y por qué. Ideal para auditorías.</p>
+            </div>
+        </div>
+    </section>
+        
+    <section id="soporte" class="support" data-aos="fade-left">
+        <h2>🌐 Únete a Nuestra Comunidad</h2>
+        <p>¿Necesitas ayuda o quieres sugerir una característica? ¡Únete a nuestro Discord!</p>
+        <a href="https://discord.gg/kQxcxRrSBF" target="_blank" class="btn-discord">🎮 Servidor de Soporte</a>
+    </section>
+
+    <section id="desarrollador" class="developer" data-aos="fade-up">
+        <h2>💻 El Desarrollador</h2>
+        <p>Creado con ❤️ por [Linyer y 1011]. ¡Sígueme en Discord para más novedades!</p>
+        <a href="https://discordapp.com/users/1237903089688772733" target="_blank" class="btn-contact-dev">Contáctame en Discord</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 LinyerBot. Todos los derechos reservados.</p>
+        <a href="#">Términos de Servicio</a> | <a href="#">Política de Privacidad</a>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+          once: true, // Animación solo una vez
+          duration: 1000 // Duración de las animaciones en ms
+      }); 
+    </script>
+    
+    <script src="script.js"></script> 
+</body>
+</html>
